@@ -1,0 +1,312 @@
+:root {
+    --background: #0b0b0b;
+    --surface: #171717;
+    --text: #f5f5f5;
+
+    --nba-red: #e31b23;
+    --euroleague-orange: #f36c21;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--surface);
+    padding: 20px 40px;
+}
+
+header {
+    background-color: #1b1b1b;
+    padding: 20px 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px;
+}
+
+.featured {
+    background-color: #1b1b1b;
+    padding: 40px;
+    max-width: 900px;
+    border-radius: 12px;
+}
+
+.category {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.featured h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.featured {
+    padding: 0;
+    max-width: 1100px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--surface);
+}
+
+.featured-image {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.featured-content {
+    padding: 30px 40px 40px;
+}
+
+.category.nba {
+    color: var(--nba-red);
+}
+
+.category.euroleague {
+    color: var(--euroleague-orange);
+}
+/* HEADER */
+
+header {
+    padding: 20px 40px;
+    background-color: var(--surface);
+    border-top: 3px solid var(--nba-red);
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+}
+
+.site-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 15px;
+}
+
+nav a {
+    margin-right: 0;
+    padding-bottom: 6px;
+}
+
+.nav-nba {
+    border-bottom: 3px solid var(--nba-red);
+}
+
+.nav-euroleague {
+    border-bottom: 3px solid var(--euroleague-orange);
+}
+
+
+/* HOMEPAGE */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.featured {
+    max-width: 1100px;
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.featured-placeholder {
+    height: 420px;
+    background-color: #050505;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #555555;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.featured-content {
+    padding: 30px 40px 40px;
+}
+
+.category.nba {
+    color: var(--nba-red);
+}
+
+.read-more:hover {
+    color: var(--nba-red);
+}
+/* LATEST ARTICLES */
+
+.latest-section {
+    margin-top: 60px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.article-card {
+    background-color: var(--surface);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image-placeholder {
+    height: 200px;
+    background-color: #050505;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #444444;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.card-description {
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+.category.people {
+    color: #f5f5f5;
+}
+
+.euro-link:hover {
+    color: var(--euroleague-orange);
+}
+/* MOBILE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .site-logo {
+        width: 130px;
+        height: 130px;
+    }
+
+   nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 15px 20px;
+    text-align: center;
+}
+
+   nav a {
+    font-size: 14px;
+    margin: 0;
+}
+    main {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .featured-placeholder {
+        height: 250px;
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+    .featured h2 {
+        font-size: 30px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* CATEGORY PAGES */
+
+.page-heading {
+    padding: 30px 0;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 40px;
+}
+
+.page-heading h1 {
+    font-size: 64px;
+    margin: 5px 0 10px;
+}
+
+.page-heading p {
+    color: #bbbbbb;
+}
+
+.nba-heading {
+    border-left: 5px solid var(--nba-red);
+    padding-left: 25px;
+}
