@@ -9,9 +9,27 @@
 
 body {
     margin: 0;
-    background-color: var(--background);
+    min-height: 100vh;
     color: var(--text);
     font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 8% 20%,
+            rgba(227, 27, 35, 0.16) 0%,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 35%,
+            rgba(29, 66, 138, 0.18) 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 75% 85%,
+            rgba(243, 108, 33, 0.14) 0%,
+            transparent 30%
+        ),
+        #0b0b0b;
 }
 
 header {
@@ -45,10 +63,11 @@ main {
 }
 
 .featured {
-    background-color: #1b1b1b;
-    padding: 40px;
-    max-width: 900px;
+    max-width: 1100px;
+    background: rgba(23, 23, 23, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
+    overflow: hidden;
 }
 
 .category {
@@ -199,7 +218,8 @@ main {
 }
 
 .article-card {
-    background-color: var(--surface);
+    background: rgba(23, 23, 23, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -309,4 +329,125 @@ main {
 .nba-heading {
     border-left: 5px solid var(--nba-red);
     padding-left: 25px;
+}
+.euroleague-heading {
+    border-left: 5px solid var(--euroleague-orange);
+    padding-left: 25px;
+}
+
+.episodes-heading {
+    border-left: 5px solid white;
+    padding-left: 25px;
+}
+
+.episodes-section {
+    margin-top: 50px;
+}
+
+.platform-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.platform-card {
+    display: block;
+    background-color: var(--surface);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-4px);
+}
+
+.platform-card h3 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.platform-card p {
+    color: #bbbbbb;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .platform-links {
+        grid-template-columns: 1fr;
+    }
+}
+.platform-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.platform-title h3 {
+    margin: 0;
+}
+
+.platform-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+/* YouTube */
+
+.youtube-icon {
+    fill: #ff0000;
+}
+
+.youtube-play {
+    fill: white;
+}
+
+/* Spotify */
+
+.spotify-icon {
+    fill: #1db954;
+}
+
+.spotify-wave {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+}
+/* NBA PAGE - BLACK / RED / BLUE */
+
+body.nba-page {
+    background:
+        radial-gradient(
+            circle at 10% 25%,
+            rgba(227, 27, 35, 0.22) 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 55%,
+            rgba(29, 66, 138, 0.25) 0%,
+            transparent 38%
+        ),
+        #0b0b0b;
+}
+
+
+/* EUROLEAGUE PAGE - BLACK / RED */
+
+body.euroleague-page {
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(227, 27, 35, 0.22) 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(160, 15, 25, 0.16) 0%,
+            transparent 35%
+        ),
+        #0b0b0b;
 }
