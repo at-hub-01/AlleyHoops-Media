@@ -33,13 +33,9 @@ body {
 }
 
 header {
+    padding: 20px 40px;
     background-color: var(--surface);
-    padding: 20px 40px;
-}
-
-header {
-    background-color: #1b1b1b;
-    padding: 20px 40px;
+    border-top: 3px solid var(--nba-red);
 }
 
 header h1 {
@@ -48,15 +44,17 @@ header h1 {
 }
 
 nav {
-    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+
+    padding: 5px 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 25px;
-    font-weight: bold;
-}
+
 
 main {
     padding: 40px;
@@ -139,18 +137,18 @@ header {
     object-fit: contain;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 15px;
-}
 
 nav a {
-    margin-right: 0;
-    padding-bottom: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 5px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
+nav a:hover {
+    transform: translateY(-2px);
+}
 .nav-nba {
     border-bottom: 3px solid var(--nba-red);
 }
@@ -450,4 +448,35 @@ body.euroleague-page {
             transparent 35%
         ),
         #0b0b0b;
+}
+.nav-nba {
+    border-bottom: 3px solid var(--nba-red);
+}
+
+.nav-nba:hover {
+    color: var(--nba-red);
+}
+
+
+.nav-euroleague {
+    border-bottom: 3px solid var(--euroleague-orange);
+}
+
+.nav-euroleague:hover {
+    color: var(--euroleague-orange);
+}
+
+
+.nav-episodes:hover {
+    color: #3b82f6;
+}
+
+
+.nav-people:hover {
+    color: #cccccc;
+}
+
+
+.nav-about:hover {
+    color: #cccccc;
 }
