@@ -1,109 +1,133 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <head>
+<html lang="el">
+<head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AlleyHoops Media</title>
-
+    <meta name="description" content="Alley Hoops Media — NBA, EuroLeague, basketball stories and episodes.">
+    <title>Alley Hoops Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-    </head>
+<body class="home-page">
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-home active" href="index.html">Home</a>
+            <a class="nav-nba" href="nba.html">NBA</a>
+            <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
+            <a class="nav-episodes" href="episodes.html">Επεισόδια</a>
+            <a class="nav-people" href="people.html">People</a>
+            <a class="nav-about" href="about.html">About</a>
+        </nav>
+    </header>
 
-    <body>
-       <header>
+    <main class="home-main">
+        <section class="news-section lead-section">
+            <div class="section-heading-row">
+                <div>
+                    <p class="eyebrow">ALLEY HOOPS MEDIA</p>
+                    <h1>Latest Stories</h1>
+                </div>
+                <span class="section-rule mixed-rule"></span>
+            </div>
 
-    <nav>
-    <a href="index.html">Home</a>
-    <a class="nav-nba" href="nba.html">NBA</a>
-    <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
-    <a class="nav-episodes" href="episodes.html">Επεισόδια</a>
-    <a class="nav-people" href="people.html">People</a>
-    <a class="nav-about" href="about.html">About</a>
-</nav>
+            <div class="lead-grid">
+                <article class="lead-story">
+                    <a class="story-image lead-image" href="#" aria-label="Open featured story">
+                        <span>FEATURED STORY IMAGE</span>
+                    </a>
+                    <div class="lead-copy">
+                        <p class="category nba">NBA</p>
+                        <h2><a href="#">Your main headline will live here</a></h2>
+                        <p class="story-summary">The biggest story of the day gets the strongest visual treatment, with enough context to make readers want to continue.</p>
+                        <p class="story-meta">By Alley Hoops Media <span>•</span> Sep 27, 2026</p>
+                    </div>
+                </article>
 
-    
+                <div class="side-stories">
+                    <article class="side-story">
+                        <a class="story-image side-image" href="#"><span>STORY IMAGE</span></a>
+                        <div>
+                            <p class="category euroleague">EuroLeague</p>
+                            <h3><a href="#">A second major basketball story goes here</a></h3>
+                            <p class="story-meta">Sep 27, 2026</p>
+                        </div>
+                    </article>
+                    <article class="side-story">
+                        <a class="story-image side-image" href="#"><span>STORY IMAGE</span></a>
+                        <div>
+                            <p class="category nba">NBA</p>
+                            <h3><a href="#">Another headline gives the homepage depth</a></h3>
+                            <p class="story-meta">Sep 26, 2026</p>
+                        </div>
+                    </article>
+                    <article class="side-story text-story">
+                        <div>
+                            <p class="category people">People</p>
+                            <h3><a href="#">Profiles, interviews and the people behind basketball</a></h3>
+                            <p class="story-meta">Sep 25, 2026</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-</header>
+        <section class="news-section">
+            <div class="section-heading-row compact">
+                <h2>NBA</h2><span class="section-rule nba-rule"></span><a class="view-all nba-view" href="nba.html">VIEW ALL NBA →</a>
+            </div>
+            <div class="story-grid">
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category nba">NBA</p><h3><a href="#">NBA article title goes here</a></h3><p class="story-summary">A short, useful description of the story appears here.</p><p class="story-meta">By Alley Hoops Media • Sep 27</p></div></article>
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category nba">NBA</p><h3><a href="#">Analysis, trades and stories from around the league</a></h3><p class="story-summary">Keep the homepage summaries short and easy to scan.</p><p class="story-meta">By Alley Hoops Media • Sep 26</p></div></article>
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category nba">NBA</p><h3><a href="#">A third NBA headline completes the section</a></h3><p class="story-summary">This becomes dynamic later when we connect the CMS.</p><p class="story-meta">By Alley Hoops Media • Sep 25</p></div></article>
+            </div>
+        </section>
 
-    <main>
+        <section class="news-section">
+            <div class="section-heading-row compact">
+                <h2>EuroLeague</h2><span class="section-rule euro-rule"></span><a class="view-all euro-view" href="euroleague.html">VIEW ALL EUROLEAGUE →</a>
+            </div>
+            <div class="story-grid">
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category euroleague">EuroLeague</p><h3><a href="#">EuroLeague article title goes here</a></h3><p class="story-summary">News, analysis and opinion from European basketball.</p><p class="story-meta">By Alley Hoops Media • Sep 27</p></div></article>
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category euroleague">EuroLeague</p><h3><a href="#">Another European basketball story</a></h3><p class="story-summary">A consistent card system makes the site easier to trust and browse.</p><p class="story-meta">By Alley Hoops Media • Sep 26</p></div></article>
+                <article class="story-card"><a class="story-image card-image" href="#"><span>ARTICLE IMAGE</span></a><div class="story-card-body"><p class="category euroleague">EuroLeague</p><h3><a href="#">The latest from clubs, players and the competition</a></h3><p class="story-summary">Real images and stories will replace these placeholders.</p><p class="story-meta">By Alley Hoops Media • Sep 25</p></div></article>
+            </div>
+        </section>
 
-    <h1 class="section-title">Latest Stories</h1>
+        <section class="news-section episodes-preview">
+            <div class="section-heading-row compact">
+                <h2>Τελευταία Επεισόδια</h2><span class="section-rule episodes-rule"></span><a class="view-all episodes-view" href="episodes.html">ALL EPISODES →</a>
+            </div>
+            <div class="episode-grid">
+                <article class="episode-card"><a class="story-image episode-image" href="episodes.html"><span class="play-button">▶</span></a><div><p class="episode-label">ALLEY HOOPS</p><h3><a href="episodes.html">Τίτλος τελευταίου επεισοδίου</a></h3><p class="story-meta">YouTube • Spotify</p></div></article>
+                <article class="episode-card"><a class="story-image episode-image" href="episodes.html"><span class="play-button">▶</span></a><div><p class="episode-label">ALLEY HOOPS</p><h3><a href="episodes.html">Τίτλος προηγούμενου επεισοδίου</a></h3><p class="story-meta">YouTube • Spotify</p></div></article>
+            </div>
+        </section>
 
-    <section class="featured">
+        <section class="news-section people-preview">
+            <div class="section-heading-row compact">
+                <h2>People</h2><span class="section-rule people-rule"></span><a class="view-all people-view" href="people.html">VIEW ALL PEOPLE →</a>
+            </div>
+            <div class="people-grid">
+                <article class="people-card"><a class="story-image people-image" href="#"><span>PROFILE IMAGE</span></a><div><p class="category people">Interview</p><h3><a href="#">The people and stories behind the game</a></h3><p class="story-summary">Interviews, profiles and conversations from basketball.</p></div></article>
+                <article class="people-card"><a class="story-image people-image" href="#"><span>PROFILE IMAGE</span></a><div><p class="category people">Profile</p><h3><a href="#">A different side of basketball culture</a></h3><p class="story-summary">A dedicated home for personalities beyond daily news.</p></div></article>
+            </div>
+        </section>
+    </main>
 
-        <div class="featured-placeholder">
-            <span>FEATURED STORY</span>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+    <p class="footer-brand">
+        ALLEY <span class="footer-hoops">HOOPS</span> <span>MEDIA</span>
+    </p>
+    <p class="footer-tagline">Built for basketball addicts.</p>
+</div>
+            <div class="footer-links"><a href="nba.html">NBA</a><a href="euroleague.html">EuroLeague</a><a href="episodes.html">Επεισόδια</a><a href="people.html">People</a><a href="about.html">About</a></div>
+            <div class="footer-social"><a href="https://www.youtube.com/@AlleyHoopsMedia" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://open.spotify.com/show/1VKS6zR828LJXfdhpcLrqQ?si=fee5dabab3a246be" target="_blank" rel="noopener noreferrer">Spotify</a></div>
         </div>
-
-        <div class="featured-content">
-            <p class="category nba">NBA</p>
-
-            <h2>Your featured article will go here</h2>
-
-            <p class="description">
-                The latest NBA and EuroLeague news, analysis and opinions
-                from Alley Hoops Media.
-            </p>
-
-            <a class="read-more" href="#">Read Article →</a>
-        </div>
-
-    </section>
-    <section class="latest-section">
-
-    <h2 class="section-title">Latest</h2>
-
-    <div class="article-grid">
-
-        <article class="article-card">
-            <div class="card-image-placeholder">ARTICLE IMAGE</div>
-
-            <div class="card-content">
-                <p class="category nba">NBA</p>
-                <h3>NBA article title goes here</h3>
-                <p class="card-description">
-                    A short description of the article will appear here.
-                </p>
-                <a class="read-more" href="#">Read Article →</a>
-            </div>
-        </article>
-
-
-        <article class="article-card">
-            <div class="card-image-placeholder">ARTICLE IMAGE</div>
-
-            <div class="card-content">
-                <p class="category euroleague">EuroLeague</p>
-                <h3>EuroLeague article title goes here</h3>
-                <p class="card-description">
-                    A short description of the article will appear here.
-                </p>
-                <a class="read-more euro-link" href="#">Read Article →</a>
-            </div>
-        </article>
-
-
-        <article class="article-card">
-            <div class="card-image-placeholder">ARTICLE IMAGE</div>
-
-            <div class="card-content">
-                <p class="category people">People</p>
-                <h3>People article title goes here</h3>
-                <p class="card-description">
-                    Profiles, interviews and stories from basketball.
-                </p>
-                <a class="read-more" href="#">Read Article →</a>
-            </div>
-        </article>
-
-    </div>
-
-</section>
-
-</main>
-    </body>
+        <p class="copyright">© 2026 Alley Hoops Media. All rights reserved.</p>
+    </footer>
+</body>
 </html>
