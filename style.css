@@ -33,9 +33,21 @@ body {
 }
 
 header {
-    padding: 20px 40px;
-    background-color: var(--surface);
-    border-top: 3px solid var(--nba-red);
+    height: 520px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("Images/εξωφυλλο.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 0 40px;
+    border-top: none;
 }
 
 header h1 {
@@ -49,9 +61,11 @@ nav {
     align-items: center;
 
     max-width: 850px;
-    margin: 0 auto 25px auto;
+    margin: 0 auto;
+    padding: 25px 20px;
 
-    padding: 5px 20px;
+    position: relative;
+    z-index: 2;
 }
 
 
