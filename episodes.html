@@ -1,162 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Όλα τα επεισόδια του Alley Hoops Media σε YouTube και Spotify.">
+    <title>Επεισόδια | Alley Hoops Media</title>
 
-        <title>Επεισόδια | Alley Hoops Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="episodes-page">
+    <header class="site-header">
+        <img class="mobile-banner" src="Images/εξωφυλλο.png" alt="Alley Hoops Media">
+        <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-group nav-left">
+            <a class="nav-home" href="index.html">Home</a>
+            <a class="nav-nba" href="nba.html">NBA</a>
+            <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
+            <a class="nav-blog" href="blog.html">Blog</a>
+        </div>
+        <div class="nav-group nav-right">
+            <a class="nav-bet" href="bet.html">AlleyHoops Bet</a>
+            <a class="nav-episodes active" href="episodes.html" aria-current="page">Επεισόδια</a>
+            <a class="nav-people" href="people.html">People</a>
+            <a class="nav-about" href="about.html">About</a>
+        </div>
+    </nav>
+    </header>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <main>
+        <div class="page-heading episodes-heading">
+            <h1>Επεισόδια</h1>
+            <p>Όλα τα επεισόδια του Alley Hoops.</p>
+        </div>
 
-    <body>
+        <section class="episodes-section">
+            <h2 class="section-title">Links</h2>
 
-       <header>
+            <div class="platform-links">
+                <a class="platform-card" href="https://www.youtube.com/@AlleyHoopsMedia" target="_blank" rel="noopener noreferrer">
+                    <div class="platform-title">
+                        <svg class="platform-icon youtube-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/>
+                            <path class="youtube-play" d="M9.6 15.6V8.4L15.8 12z"/>
+                        </svg>
+                        <h3>YouTube</h3>
+                    </div>
+                    <p>Δες τα επεισόδια στο YouTube →</p>
+                </a>
 
-   <nav class="main-nav" aria-label="Main navigation">
+                <a class="platform-card" href="https://open.spotify.com/show/1VKS6zR828LJXfdhpcLrqQ?si=fee5dabab3a246be" target="_blank" rel="noopener noreferrer">
+                    <div class="platform-title">
+                        <svg class="platform-icon spotify-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="12"/>
+                            <path class="spotify-wave" d="M6.5 9.2c3.8-1.1 8.3-.8 11.5.9"/>
+                            <path class="spotify-wave" d="M7.2 12.2c3.3-.9 7.2-.6 10 .8"/>
+                            <path class="spotify-wave" d="M7.8 15c2.7-.7 5.8-.5 8.3.7"/>
+                        </svg>
+                        <h3>Spotify</h3>
+                    </div>
+                    <p>Άκουσε τα επεισόδια στο Spotify →</p>
+                </a>
+            </div>
+        </section>
 
-    <div class="nav-group nav-left">
-        <a class="nav-home" href="index.html">Home</a>
-        <a class="nav-nba" href="nba.html">NBA</a>
-        <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
-        <a class="nav-blog" href="blog.html">Blog</a>
-    </div>
+        <section class="episodes-section">
+            <h2 class="section-title">Τελευταία Επεισόδια</h2>
 
-    <div class="nav-group nav-right">
-        <a class="nav-bet" href="bet.html">AlleyHoops Bet</a>
-        <a class="nav-episodes" href="episodes.html">Επεισόδια</a>
-        <a class="nav-people" href="people.html">People</a>
-        <a class="nav-about" href="about.html">About</a>
-    </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="card-image-placeholder">EPISODE IMAGE</div>
+                    <div class="card-content">
+                        <h3>Τίτλος επεισοδίου</h3>
+                        <p class="card-description">Μικρή περιγραφή του επεισοδίου.</p>
+                        <a class="read-more" href="#" target="_blank">Δες το επεισόδιο →</a>
+                    </div>
+                </article>
 
-</nav>
-    
+                <article class="article-card">
+                    <div class="card-image-placeholder">EPISODE IMAGE</div>
+                    <div class="card-content">
+                        <h3>Τίτλος επεισοδίου</h3>
+                        <p class="card-description">Μικρή περιγραφή του επεισοδίου.</p>
+                        <a class="read-more" href="#" target="_blank">Δες το επεισόδιο →</a>
+                    </div>
+                </article>
 
-</header>
+                <article class="article-card">
+                    <div class="card-image-placeholder">EPISODE IMAGE</div>
+                    <div class="card-content">
+                        <h3>Τίτλος επεισοδίου</h3>
+                        <p class="card-description">Μικρή περιγραφή του επεισοδίου.</p>
+                        <a class="read-more" href="#" target="_blank">Δες το επεισόδιο →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
-        <main>
-
-            <div class="page-heading episodes-heading">
-                <h1>Επεισόδια</h1>
-                <p>Όλα τα επεισόδια του Alley Hoops.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">
+                    ALLEY <span class="footer-hoops">HOOPS</span> <span class="footer-media">MEDIA</span>
+                </p>
+                <p class="footer-tagline">Built for basketball addicts.</p>
             </div>
 
+            <div class="footer-links">
+                <a href="nba.html">NBA</a>
+                <a href="euroleague.html">EuroLeague</a>
+                <a href="blog.html">Blog</a>
+                <a href="bet.html">AlleyHoops Bet</a>
+                <a href="episodes.html">Επεισόδια</a>
+                <a href="people.html">People</a>
+                <a href="about.html">About</a>
+            </div>
 
-            <!-- LINKS -->
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@AlleyHoopsMedia" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://open.spotify.com/show/1VKS6zR828LJXfdhpcLrqQ?si=fee5dabab3a246be" target="_blank" rel="noopener noreferrer">Spotify</a>
+            </div>
+        </div>
 
-            <section class="episodes-section">
-
-                <h2 class="section-title">Links</h2>
-
-                <div class="platform-links">
-
-                    <a class="platform-card"
-   href="https://www.youtube.com/@AlleyHoopsMedia"
-   target="_blank">
-    <div class="platform-title">
-        <svg class="platform-icon youtube-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/>
-            <path class="youtube-play" d="M9.6 15.6V8.4L15.8 12z"/>
-        </svg>
-
-        <h3>YouTube</h3>
-    </div>
-
-    <p>Δες τα επεισόδια στο YouTube →</p>
-</a>
-
-
-<a class="platform-card"
-   href="https://open.spotify.com/show/1VKS6zR828LJXfdhpcLrqQ?si=fee5dabab3a246be"
-   target="_blank">
-    <div class="platform-title">
-        <svg class="platform-icon spotify-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="12"/>
-            <path class="spotify-wave" d="M6.5 9.2c3.8-1.1 8.3-.8 11.5.9"/>
-            <path class="spotify-wave" d="M7.2 12.2c3.3-.9 7.2-.6 10 .8"/>
-            <path class="spotify-wave" d="M7.8 15c2.7-.7 5.8-.5 8.3.7"/>
-        </svg>
-
-        <h3>Spotify</h3>
-    </div>
-
-    <p>Άκουσε τα επεισόδια στο Spotify →</p>
-</a>
-
-                </div>
-
-            </section>
-
-
-            <!-- LATEST EPISODES -->
-
-            <section class="episodes-section">
-
-                <h2 class="section-title">Τελευταία Επεισόδια</h2>
-
-                <div class="article-grid">
-
-                    <article class="article-card">
-                        <div class="card-image-placeholder">
-                            EPISODE IMAGE
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Τίτλος επεισοδίου</h3>
-
-                            <p class="card-description">
-                                Μικρή περιγραφή του επεισοδίου.
-                            </p>
-
-                            <a class="read-more" href="#" target="_blank">
-                                Δες το επεισόδιο →
-                            </a>
-                        </div>
-                    </article>
-
-
-                    <article class="article-card">
-                        <div class="card-image-placeholder">
-                            EPISODE IMAGE
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Τίτλος επεισοδίου</h3>
-
-                            <p class="card-description">
-                                Μικρή περιγραφή του επεισοδίου.
-                            </p>
-
-                            <a class="read-more" href="#" target="_blank">
-                                Δες το επεισόδιο →
-                            </a>
-                        </div>
-                    </article>
-
-
-                    <article class="article-card">
-                        <div class="card-image-placeholder">
-                            EPISODE IMAGE
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Τίτλος επεισοδίου</h3>
-
-                            <p class="card-description">
-                                Μικρή περιγραφή του επεισοδίου.
-                            </p>
-
-                            <a class="read-more" href="#" target="_blank">
-                                Δες το επεισόδιο →
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-
-            </section>
-
-        </main>
-
-    </body>
+        <p class="copyright">© 2026 Alley Hoops Media.</p>
+    </footer>
+</body>
 </html>

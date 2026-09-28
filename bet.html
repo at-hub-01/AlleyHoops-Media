@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="el">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,84 +9,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="bet-page">
-
-    <header>
+    <header class="site-header">
+        <img class="mobile-banner" src="Images/εξωφυλλο.png" alt="Alley Hoops Media">
         <nav class="main-nav" aria-label="Main navigation">
-
-    <div class="nav-group nav-left">
-        <a class="nav-home" href="index.html">Home</a>
-        <a class="nav-nba" href="nba.html">NBA</a>
-        <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
-        <a class="nav-blog" href="blog.html">Blog</a>
-    </div>
-
-    <div class="nav-group nav-right">
-        <a class="nav-bet" href="bet.html">AlleyHoops Bet</a>
-        <a class="nav-episodes" href="episodes.html">Επεισόδια</a>
-        <a class="nav-people" href="people.html">People</a>
-        <a class="nav-about" href="about.html">About</a>
-    </div>
-
-</nav>
+        <div class="nav-group nav-left">
+            <a class="nav-home" href="index.html">Home</a>
+            <a class="nav-nba" href="nba.html">NBA</a>
+            <a class="nav-euroleague" href="euroleague.html">EuroLeague</a>
+            <a class="nav-blog" href="blog.html">Blog</a>
+        </div>
+        <div class="nav-group nav-right">
+            <a class="nav-bet active" href="bet.html" aria-current="page">AlleyHoops Bet</a>
+            <a class="nav-episodes" href="episodes.html">Επεισόδια</a>
+            <a class="nav-people" href="people.html">People</a>
+            <a class="nav-about" href="about.html">About</a>
+        </div>
+    </nav>
     </header>
 
     <main>
-
         <div class="page-heading bet-heading">
             <h1>AlleyHoops Bet</h1>
             <p>Basketball picks και ανάλυση από την ομάδα του Alley Hoops.</p>
         </div>
 
         <section class="bet-section">
-
             <h2 class="section-title">Τελευταία Picks</h2>
 
             <div class="bet-grid">
-
                 <article class="bet-card">
                     <p class="bet-league">NBA</p>
                     <h3>Team A vs Team B</h3>
-
-                    <p class="bet-pick">
-                        Pick: <strong>Το σημείο θα μπει εδώ</strong>
-                    </p>
-
-                    <p class="bet-analysis">
-                        Εδώ θα γράφουμε λίγες γραμμές με το σκεπτικό πίσω από το pick.
-                    </p>
-
+                    <p class="bet-pick">Pick: <strong>Το σημείο θα μπει εδώ</strong></p>
+                    <p class="bet-analysis">Εδώ θα γράφουμε λίγες γραμμές με το σκεπτικό πίσω από το pick.</p>
                     <p class="story-meta">Sep 28, 2026</p>
                 </article>
 
                 <article class="bet-card">
                     <p class="bet-league">EUROLEAGUE</p>
                     <h3>Team A vs Team B</h3>
-
-                    <p class="bet-pick">
-                        Pick: <strong>Το σημείο θα μπει εδώ</strong>
-                    </p>
-
-                    <p class="bet-analysis">
-                        Μικρή ανάλυση του αγώνα και του συγκεκριμένου σημείου.
-                    </p>
-
+                    <p class="bet-pick">Pick: <strong>Το σημείο θα μπει εδώ</strong></p>
+                    <p class="bet-analysis">Μικρή ανάλυση του αγώνα και του συγκεκριμένου σημείου.</p>
                     <p class="story-meta">Sep 28, 2026</p>
                 </article>
-
             </div>
-
         </section>
 
         <p class="bet-disclaimer">
             18+ • Παίξε υπεύθυνα. Το περιεχόμενο αποτελεί προσωπική άποψη και δεν εγγυάται αποτέλεσμα.
         </p>
-
     </main>
 
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">
+                    ALLEY <span class="footer-hoops">HOOPS</span> <span class="footer-media">MEDIA</span>
+                </p>
+                <p class="footer-tagline">Built for basketball addicts.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="nba.html">NBA</a>
+                <a href="euroleague.html">EuroLeague</a>
+                <a href="blog.html">Blog</a>
+                <a href="bet.html">AlleyHoops Bet</a>
+                <a href="episodes.html">Επεισόδια</a>
+                <a href="people.html">People</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@AlleyHoopsMedia" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://open.spotify.com/show/1VKS6zR828LJXfdhpcLrqQ?si=fee5dabab3a246be" target="_blank" rel="noopener noreferrer">Spotify</a>
+            </div>
+        </div>
+
+        <p class="copyright">© 2026 Alley Hoops Media.</p>
+    </footer>
 </body>
 </html>
