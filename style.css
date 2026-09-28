@@ -1045,3 +1045,35 @@ body.bet-page {
         font-size: 11px;
     }
 }
+/* FINAL MOBILE HEADER */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 0 !important;
+        background: #050505 !important;
+    }
+
+    .main-nav {
+        order: 1 !important;
+        width: 100% !important;
+        padding: 16px 12px !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #1d428a 0%,
+                #090909 50%,
+                #f36c21 100%
+            ) !important;
+    }
+
+    .mobile-banner {
+        order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
