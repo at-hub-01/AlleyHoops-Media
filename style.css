@@ -1,7 +1,6 @@
 :root {
     --background: #090909;
     --surface: #151515;
-    --surface-2: #1b1b1b;
     --text: #f5f5f2;
     --muted: #a7a7a7;
     --line: rgba(255,255,255,.10);
@@ -36,6 +35,7 @@ a {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 /* ==================================================
@@ -98,10 +98,6 @@ This keeps the two groups between the side banners and the central logo.
     transition: color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
-.main-nav a:hover {
-    transform: translateY(-2px);
-}
-
 .nav-home:hover,
 .nav-home.active {
     border-color: #fff;
@@ -145,6 +141,19 @@ This keeps the two groups between the side banners and the central logo.
 .nav-about.active {
     color: #d0d0d0;
     border-color: #d0d0d0;
+}
+
+
+.main-nav a:focus-visible,
+.view-all:focus-visible,
+.read-more:focus-visible,
+.footer-links a:focus-visible,
+.footer-social a:focus-visible,
+.story-image:focus-visible,
+.story-card a:focus-visible,
+.platform-card:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }
 
 /* ==================================================
@@ -199,7 +208,7 @@ main:not(.home-main) {
 }
 
 .section-heading-row h2 {
-    font-size: 38px;
+    font-size: clamp(31px, 3.2vw, 38px);
 }
 
 .eyebrow {
@@ -257,7 +266,6 @@ main:not(.home-main) {
 
 .view-all:hover {
     color: #fff;
-    transform: translateX(4px);
 }
 
 .nba-view:hover {
@@ -323,10 +331,6 @@ main:not(.home-main) {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .16em;
-}
-
-.story-image:hover {
-    filter: brightness(1.13);
 }
 
 /* ==================================================
@@ -405,10 +409,6 @@ main:not(.home-main) {
     line-height: 1.05;
 }
 
-.side-story.text-story {
-    grid-template-columns: 1fr;
-    padding-top: 24px;
-}
 
 .story-grid {
     display: grid;
@@ -423,12 +423,20 @@ main:not(.home-main) {
 }
 
 .story-card:hover {
-    transform: translateY(-4px);
     border-color: rgba(255,255,255,.22);
 }
 
 .card-image {
     aspect-ratio: 16 / 9;
+}
+
+.story-image img,
+.card-image img,
+.episode-image img,
+.people-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .story-card-body {
@@ -546,7 +554,7 @@ main:not(.home-main) {
 
 .page-heading h1 {
     margin: 5px 0 10px;
-    font-size: 64px;
+    font-size: clamp(48px, 6vw, 64px);
 }
 
 .page-heading p {
@@ -616,7 +624,7 @@ body.bet-page {
 .section-title {
     margin: 0 0 25px;
     font-family: "Inter", Arial, sans-serif;
-    font-size: 28px;
+    font-size: clamp(26px, 3.5vw, 32px);
     font-weight: 600;
 }
 
@@ -640,7 +648,6 @@ body.bet-page {
 }
 
 .platform-card:hover {
-    transform: translateY(-4px);
     border-color: rgba(255,255,255,.20);
 }
 
@@ -864,76 +871,72 @@ body.bet-page {
 }
 
 @media (max-width: 900px) {
-.site-header {
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    background: #050505;
-}
+    .site-header {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: #050505;
+    }
 
-/* Banner κάτω από το menu */
-.mobile-banner {
-    order: 2;
+    /* Navigation above the full banner on tablets and phones. */
+    .main-nav {
+        order: 1;
+        width: 100%;
+        padding: 10px 10px 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(29, 66, 138, .94) 0%,
+                rgba(9, 9, 9, .98) 50%,
+                rgba(243, 108, 33, .92) 100%
+            );
+        border-bottom: 1px solid rgba(255,255,255,.12);
+    }
 
-    display: block;
-    width: 100%;
-    height: auto;
-}
+    .nav-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2px;
+    }
 
-/* NAV πάνω από το banner */
-.main-nav {
-    order: 1;
+    .main-nav a {
+        min-height: 44px;
+        padding: 7px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal;
+        touch-action: manipulation;
+    }
 
-    width: 100%;
-    padding: 10px 10px 8px;
+    .main-nav a.active {
+        background: rgba(255,255,255,.10);
+        border-radius: 5px;
+    }
 
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(29, 66, 138, 0.92) 0%,
-            rgba(8, 8, 8, 0.97) 48%,
-            rgba(243, 108, 33, 0.90) 100%
-        );
-
-    border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-    /* 4 links πάνω + 4 links κάτω */
-.nav-group {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    gap: 2px;
-}
-   /* πιο compact links */
-.main-nav a {
-    padding: 7px 2px;
-
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1.1;
-
-    text-align: center;
-    white-space: normal;
-}
-.main-nav a.active {
-    background: rgba(255,255,255,.10);
-    border-radius: 5px;
-}
+    .mobile-banner {
+        order: 2;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
     .lead-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .side-stories {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 18px;
         border-top: 0;
     }
@@ -949,19 +952,9 @@ body.bet-page {
         margin-bottom: 12px;
     }
 
-    .side-story.text-story {
-        padding: 16px;
-        background: var(--surface);
-        border: 1px solid var(--line);
-    }
-
     .story-grid,
     .article-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .story-grid .story-card:last-child {
-        display: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .people-card {
@@ -974,46 +967,57 @@ body.bet-page {
 
     .footer-inner {
         grid-template-columns: 1fr 1fr;
+        gap: 36px;
     }
 }
 
 @media (max-width: 650px) {
     .home-main,
     main {
-        width: min(100% - 28px, var(--content-width));
+        width: min(calc(100% - 28px), var(--content-width));
     }
 
     .home-main {
-        padding-top: 42px;
+        padding: 40px 0 64px;
     }
 
     main:not(.home-main) {
-        padding-top: 34px;
+        padding: 32px 0 64px;
     }
 
     .news-section {
-        margin-bottom: 54px;
+        margin-bottom: 48px;
     }
 
     .section-heading-row {
-        gap: 12px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-heading-row h1 {
+        font-size: clamp(42px, 13vw, 56px);
     }
 
     .section-heading-row h2 {
-        font-size: 31px;
+        font-size: clamp(28px, 8vw, 34px);
+    }
+
+    .section-rule {
+        min-width: 28px;
     }
 
     .view-all {
         font-size: 10px;
-        letter-spacing: .8px;
+        letter-spacing: .7px;
     }
 
     .lead-copy {
-        padding: 22px;
+        padding: 20px;
     }
 
     .lead-copy h2 {
-        font-size: 38px;
+        font-size: clamp(34px, 10vw, 44px);
+        line-height: .98;
     }
 
     .side-stories,
@@ -1026,68 +1030,182 @@ body.bet-page {
         grid-template-columns: 1fr;
     }
 
-    .story-grid .story-card:last-child {
-        display: block;
-    }
-
     .side-story {
         display: grid;
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 105px minmax(0, 1fr);
         gap: 14px;
         padding: 14px 0;
         border-bottom: 1px solid var(--line);
     }
 
-    .side-story.text-story {
-        display: block;
+    .side-image {
+        width: 105px;
+        margin-bottom: 0;
     }
 
     .side-story h3 {
         font-size: 21px;
     }
 
+    .page-heading {
+        margin-bottom: 32px;
+        padding: 22px 0 22px 18px;
+        border-left-width: 4px;
+    }
+
     .page-heading h1 {
-        font-size: 48px;
+        font-size: clamp(40px, 13vw, 52px);
+    }
+
+    .page-heading p,
+    .story-summary,
+    .story-card .story-summary,
+    .people-card .story-summary,
+    .bet-analysis,
+    .card-description,
+    .platform-card p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .blog-section,
+    .bet-section,
+    .episodes-section {
+        margin-top: 40px;
+    }
+
+    .story-card,
+    .episode-card,
+    .people-card,
+    .article-card,
+    .bet-card,
+    .platform-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .story-card-body,
+    .episode-card > div,
+    .people-card > div,
+    .card-content,
+    .bet-card,
+    .platform-card {
+        padding: 20px;
+    }
+
+    .story-card h3 {
+        font-size: 26px;
+        line-height: 1.08;
+    }
+
+    .episode-card h3 {
+        font-size: 23px;
+    }
+
+    .people-card h3 {
+        font-size: 28px;
+        line-height: 1.05;
+    }
+
+    .bet-card h3 {
+        font-size: 28px;
+    }
+
+    .card-image-placeholder {
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
     .footer-inner {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 28px;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 18px;
+    }
+
+    .footer-links a,
+    .footer-social a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        touch-action: manipulation;
+    }
+
+    .footer-social {
+        gap: 20px;
+    }
+
+    .copyright {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-nav {
+        padding: 8px 6px 6px;
+        gap: 2px;
     }
 
     .main-nav a {
-        font-size: 11px;
+        min-height: 44px;
+        padding: 6px 2px;
+        font-size: 10.5px;
+        line-height: 1.1;
+    }
+
+    .home-main,
+    main {
+        width: calc(100% - 22px);
+    }
+
+    .section-heading-row {
+        gap: 8px;
+    }
+
+    .view-all {
+        font-size: 9px;
+        letter-spacing: .5px;
+    }
+
+    .lead-copy,
+    .story-card-body,
+    .episode-card > div,
+    .people-card > div,
+    .card-content,
+    .bet-card,
+    .platform-card {
+        padding: 18px;
+    }
+
+    .page-heading {
+        padding-left: 16px;
+    }
+
+    .footer-links {
+        gap: 8px 14px;
     }
 }
-/* FINAL MOBILE HEADER */
 
-@media (max-width: 900px) {
-
-    .site-header {
-        display: flex !important;
-        flex-direction: column !important;
-        min-height: 0 !important;
-        background: #050505 !important;
+/* Hover motion only on devices that actually support hover. */
+@media (hover: hover) and (pointer: fine) {
+    .main-nav a:hover {
+        transform: translateY(-2px);
     }
 
-    .main-nav {
-        order: 1 !important;
-        width: 100% !important;
-        padding: 16px 12px !important;
-
-        background:
-            linear-gradient(
-                90deg,
-                #1d428a 0%,
-                #090909 50%,
-                #f36c21 100%
-            ) !important;
+    .view-all:hover {
+        transform: translateX(4px);
     }
 
-    .mobile-banner {
-        order: 2 !important;
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
+    .story-image:hover {
+        filter: brightness(1.13);
+    }
+
+    .story-card:hover,
+    .platform-card:hover {
+        transform: translateY(-4px);
     }
 }
