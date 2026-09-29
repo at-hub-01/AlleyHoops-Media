@@ -335,27 +335,28 @@ main:not(.home-main) {
 
 .lead-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(300px, .8fr);
-    gap: 28px;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 0.85fr);
+    gap: 34px;
+    align-items: start;
 }
 
 .lead-story {
     background: var(--surface);
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255,255,255,.14);
 }
 
 .lead-image {
-    aspect-ratio: 16 / 8.8;
+    aspect-ratio: 16 / 9.4;
 }
 
 .lead-copy {
-    padding: 28px 30px 30px;
+    padding: 32px 34px 34px;
 }
 
 .lead-copy h2 {
     margin: 0;
-    font-size: clamp(34px, 4vw, 54px);
-    line-height: .98;
+    font-size: clamp(40px, 4.5vw, 62px);
+    line-height: .95;
 }
 
 .lead-copy h2 a,
@@ -382,26 +383,26 @@ main:not(.home-main) {
 }
 
 .side-stories {
-    border-top: 1px solid var(--line);
+    border-top: 3px solid var(--line);
 }
 
 .side-story {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 16px;
-    padding: 18px 0;
+    grid-template-columns: 135px 1fr;
+    gap: 18px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--line);
 }
 
 .side-image {
-    width: 120px;
+    width: 135px;
     aspect-ratio: 4 / 3;
 }
 
 .side-story h3 {
     margin: 0;
-    font-size: 24px;
-    line-height: 1.02;
+    font-size: 26px;
+    line-height: 1.05;
 }
 
 .side-story.text-story {
@@ -863,55 +864,68 @@ body.bet-page {
 }
 
 @media (max-width: 900px) {
-   .site-header {
+.site-header {
     min-height: 0;
-    background: #050505;
-
     display: flex;
     flex-direction: column;
+    background: #050505;
 }
 
-    .mobile-banner {
+/* Banner κάτω από το menu */
+.mobile-banner {
+    order: 2;
+
     display: block;
     width: 100%;
     height: auto;
-    order: 2;
 }
 
-    .main-nav {
+/* NAV πάνω από το banner */
+.main-nav {
     order: 1;
 
-    padding: 16px 12px;
+    width: 100%;
+    padding: 10px 10px 8px;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
 
     background:
         linear-gradient(
             90deg,
-            rgba(29, 66, 138, 0.95) 0%,
-            rgba(8, 8, 8, 0.96) 48%,
+            rgba(29, 66, 138, 0.92) 0%,
+            rgba(8, 8, 8, 0.97) 48%,
             rgba(243, 108, 33, 0.90) 100%
         );
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-    .nav-group {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 8px;
-    }
+    /* 4 links πάνω + 4 links κάτω */
+.nav-group {
+    width: 100%;
 
-    .main-nav a {
-        padding: 8px 3px;
-        font-size: 12px;
-        line-height: 1.15;
-        text-align: center;
-        white-space: normal;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 2px;
+}
+   /* πιο compact links */
+.main-nav a {
+    padding: 7px 2px;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    text-align: center;
+    white-space: normal;
+}
+.main-nav a.active {
+    background: rgba(255,255,255,.10);
+    border-radius: 5px;
+}
 
     .lead-grid {
         grid-template-columns: 1fr;
