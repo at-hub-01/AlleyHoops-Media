@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Alley Hoops Media admin access.">
+    <title>Admin | Alley Hoops Media</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+    <main class="admin-shell">
+        <section class="admin-card" aria-labelledby="admin-title">
+            <div class="admin-brand">
+                <p class="brand-line">
+                    ALLEY <span class="brand-hoops">HOOPS</span>
+                    <span class="brand-media">MEDIA</span>
+                </p>
+                <p class="admin-label">ADMIN</p>
+            </div>
+
+            <div id="loading-view" class="admin-view">
+                <p class="status-text">Checking session…</p>
+            </div>
+
+            <div id="login-view" class="admin-view" hidden>
+                <div class="view-heading">
+                    <h1 id="admin-title">Admin Login</h1>
+                    <p>Sign in with an approved Alley Hoops admin account.</p>
+                </div>
+
+                <form id="login-form" novalidate>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="username" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required>
+                    </div>
+
+                    <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+
+                    <button id="login-button" class="primary-button" type="submit">Log in</button>
+                </form>
+
+                <a class="back-link" href="index.html">← Back to Alley Hoops Media</a>
+            </div>
+
+            <div id="dashboard-view" class="admin-view" hidden>
+                <div class="dashboard-top">
+                    <div>
+                        <p class="eyebrow">SIGNED IN</p>
+                        <h1>Admin Dashboard</h1>
+                        <p id="admin-email" class="admin-email"></p>
+                    </div>
+
+                    <button id="logout-button" class="secondary-button" type="button">Log out</button>
+                </div>
+
+                <div class="dashboard-grid" aria-label="Admin sections">
+                    <article class="dashboard-item">
+                        <p class="item-kicker nba-kicker">NBA / ARTICLES</p>
+                        <h2>Articles</h2>
+                        <p>Create, edit and publish stories. We connect this in the next step.</p>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <p class="item-kicker euro-kicker">EUROLEAGUE</p>
+                        <h2>EuroLeague</h2>
+                        <p>Manage EuroLeague stories from the same article system.</p>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <p class="item-kicker episode-kicker">MEDIA</p>
+                        <h2>Episodes</h2>
+                        <p>Add podcast and YouTube episode links without editing HTML.</p>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <p class="item-kicker bet-kicker">PICKS</p>
+                        <h2>AlleyHoops Bet</h2>
+                        <p>Add and edit picks from the admin panel.</p>
+                    </article>
+                </div>
+
+                <p class="dashboard-note">Login is now connected. Content editing will be added next.</p>
+
+                <a class="back-link" href="index.html">← Open public site</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js?v=1"></script>
+</body>
+</html>
